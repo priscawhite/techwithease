@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tech with Ease Customer Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1692.0.min.js"></script>
+    <script src="./scripts/login.js" defer></script>
+</head>
+<body class="container">
+    <header class="logo">
+        <img src="./img/logo.png" alt="Tech with Ease Logo">
+        <h1>Welcome to Tech with Ease</h1>
+    </header>
+    <div id="login-container">
+        <!-- Sign In -->
+        <div class="form-wrapper">
+            <form id="signup-form">
+                <p>At Tech with Ease, we know technology works best when it works for you. That’s why we’ve built a centralized support experience that helps you get back to work quickly with less downtime and less frustration.</p>
+                <h2>Ready to get started?</h2>
+                <h4>Log in to access your IT support dashboard and connect with the help you need — whenever you need it.</h4>
+                <p>Enter your email address to receive a one-time passcode.</p>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <!-- OTP Verification -->
+            <form id="otp-form" style="display:none">
+                <p>Enter the code sent to your email.</p>
+                <input type="text" id="otp-code" placeholder="One-time code" required>
+                <button type="submit">Verify</button>
+            </form>
+
+            <div id="error-message"></div>
+        </div>
+    </div>
+</body>
+</html>
