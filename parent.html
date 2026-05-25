@@ -61,15 +61,15 @@
     <script src="https://d1qavrc6wcmu78.cloudfront.net/lex-web-ui-loader.js"></script>
   <script>
     if (!sessionStorage.getItem('tokens')) {
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
     }
 
     document.getElementById('logout-link').addEventListener('click', function(e) {
       e.preventDefault();
       sessionStorage.removeItem('tokens');
       var clientId = '3jcc9j0fovusjqqpvjm76oo5at';
-      var loginUrl = window.location.href.replace('parent.html', 'login.html');
-      var logoutUrl = 'login.html'
+      var loginUrl = window.location.href.replace('parent.html', 'index.html');
+      var logoutUrl = 'index.html'
         + '?client_id=' + clientId
         + '&logout_uri=' + encodeURIComponent(loginUrl);
       window.location.href = logoutUrl;
