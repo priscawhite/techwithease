@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech with Ease</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script async src="./scripts/main.js"></script>
+
+
+</head>
+<body>
+  <main class="container">
+    <header> 
+      <img src="./img/logo.png" alt="Tech with Ease Logo" class="logo">
+    </header>
+    <nav>
+      <ul class="navbar">
+        <a href="#"><h3>Get Support</h3></a>
+        <a href="#"><h3>Chat with Us</h3></a>
+        <a href="#" id="logout-link"><h3>Log Out</h3></a>
+      </ul>
+    </nav>
+    <section class="banner">
+      <h2><em>Your Gateway to Simple Tech Solutions</em></h2>
+      <div class="welcome">
+        <h1>Welcome to the Customer Portal</h1>
+          <h4>How can we help you today?</h4>
+      </div>
+      <div class="welcome-grid">
+        <div class="welcome-card">
+            <h3>Open a Support Ticket</h3>
+            <p>Report issues, request assistance, and monitor ticket updates in real time through our secure support portal.</p>
+            <a class="btn" href="#">Submit a Ticket</a>
+        </div>
+        <div class="welcome-card">
+            <h3>Contact IT Support</h3>
+            <p>Need personalized assistance? Reach out to a live support specialist through chat, phone, or email support channels.</p>
+            <a class="btn" href="#">Contact Us</a>
+        </div>
+        <div class="welcome-card">
+            <h3>Access Helpful Resources</h3>
+            <p>Browse troubleshooting guides, FAQs, account support, and self-service tools designed to help you resolve issues faster.</p>
+            <a class="btn" href="#">Explore Resources</a>
+        </div>
+        <div class="welcome-card">
+            <h3>Get Chat Support</h3>
+            <p>Get instant help for common issues using our AI-powered support chatbot. Click the button below to start a conversation.</p>
+            <img src="./img/arrow.png" alt="arrow pointing down to chatbot" class="arrow">
+        </div>
+        </div>
+        <div class="new-user">
+            <h3>Fast Support. Simple Access. Reliable Service.</h3>
+        </div>
+    </section>
+    <div id="lex-web-ui"></div>
+
+    <script src="https://d1qavrc6wcmu78.cloudfront.net/lex-web-ui-loader.js"></script>
+  <script>
+    if (!sessionStorage.getItem('tokens')) {
+      window.location.href = 'login.html';
+    }
+
+    document.getElementById('logout-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      sessionStorage.removeItem('tokens');
+      var clientId = '3jcc9j0fovusjqqpvjm76oo5at';
+      var loginUrl = window.location.href.replace('parent.html', 'login.html');
+      var logoutUrl = 'login.html'
+        + '?client_id=' + clientId
+        + '&logout_uri=' + encodeURIComponent(loginUrl);
+      window.location.href = logoutUrl;
+    });
+
+    var lexWebUiLoader = new ChatBotUiLoader.IframeLoader({
+      baseUrl: 'https://d1qavrc6wcmu78.cloudfront.net/'
+    });
+
+    lexWebUiLoader.load({
+      ui: { parentOrigin: window.location.origin },
+      iframe: { iframeOrigin: 'https://d1qavrc6wcmu78.cloudfront.net' }
+    }).catch(function(error) {
+      console.error('chatbot UI failed to load', error);
+    });
+
+  </script>
+  </main>
+  <footer>
+      <p>&copy; 2026 Tech with Ease. All rights reserved.</p>
+    </footer>
+</body>
+</html>
