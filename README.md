@@ -20,8 +20,10 @@ The solution uses AWS managed services including Amazon Lex, Amazon Cognito, AWS
 
 ![website GIF](/img/TechWithEase_chat_demo.gif)
 
----
+Try the [live demo](https://priscawhite.github.io/techwithease)!  
+Type or say "My internet is not working" or "I need help with my bill"
 
+---
 # Website Configuration
 
 ## Landing Page Design
@@ -261,20 +263,6 @@ The project includes automated test documentation covering:
 - Chatbot functionality
 - API integrations
 - End-to-end user flows
-
----
-
-## Repository Structure
-
-```text
-/contact-flow   - Defines Amazon Connect contact flow architecture, including call routing logic and end-to-end customer interaction design
-
-/dynamodb       - Specifies DynamoDB schema design, configuration, and data access patterns supporting scalable session management
-
-/lex            - Details Amazon Lex chatbot architecture, including intent modeling, slot management, and backend integrations
-
-/tests          - Documents automated testing framework, covering end-to-end validation, scenario coverage, and system reliability checks
-```
 
 ---
 
