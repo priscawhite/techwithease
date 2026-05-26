@@ -36,5 +36,26 @@
             <div id="error-message"></div>
         </div>
     </div>
+
+    <!-- Chatbot Loader Configuration -->
+    <script>
+        var loaderOpts = {
+            baseUrl: 'https://d1qavrc6wcmu78.cloudfront.net/'
+        };
+
+        var chatbotUiConfig = {
+            ui: {
+                parentOrigin: 'https://priscawhite.github.io/'
+            },
+            iframe: {
+                iframeOrigin: 'https://d1qavrc6wcmu78.cloudfront.net'
+            },
+            lex: {
+                botId: 'NLZCSJMM5Z',
+                region: 'us-west-2'
+            }
+        };
+    </script>
+    <script src="https://d1qavrc6wcmu78.cloudfront.net/lex-web-ui-loader.min.js" defer></script>
 </body>
 </html>
